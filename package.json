@@ -1,0 +1,39 @@
+{
+  "name": "chengfeng-cursor-follow",
+  "version": "0.1.0",
+  "description": "Claude Code / Codex skill: turn any character into a webpage that turns its head to follow the cursor, using any image-to-video model.",
+  "license": "Apache-2.0",
+  "author": "成峰 / AI产品自由",
+  "bin": {
+    "chengfeng-cursor-follow": "bin/install.js"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md",
+    "CITATION.cff",
+    "SKILL.md"
+  ],
+  "keywords": [
+    "claude-code",
+    "codex",
+    "skill",
+    "ai-agent",
+    "cursor-follow",
+    "image-to-video",
+    "landing-page"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agentchengfeng/chengfeng-cursor-follow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Agentchengfeng/chengfeng-cursor-follow/issues"
+  },
+  "homepage": "https://github.com/Agentchengfeng/chengfeng-cursor-follow#readme",
+  "engines": {
+    "node": ">=18"
+  }
+}
