@@ -1,6 +1,6 @@
 # chengfeng-cursor-follow
 
-**让任意角色跟着鼠标转头的网页 Skill。适用于 Claude Code / Codex，不绑定视频模型平台。**
+**帮你做一个网页，页面主角会跟着访客的鼠标转头。适用于 Claude Code / Codex，不绑定视频模型平台。**
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
@@ -8,7 +8,12 @@
   <img src="docs/demo.webp" alt="角色随鼠标左右转头" width="480">
 </p>
 
-给 Agent 一个角色（现成图片，或者一句外观描述），它会：生成一张正视角色图 → 用你手上的任意图生视频模型各做一段“看左”“看右” → 抽成帧序列 → 套进落地页模板。打开网页，鼠标往哪边移，角色就把头转向哪边。
+告诉 Agent 你要做什么网页（产品首页、个人主页、活动页……），它会分四步完成：
+
+1. **问清网页**：做什么用、名字和介绍、要放哪些内容、主角形象和风格。
+2. **做主角形象**：按网页调性设计形象，用你手上的生图和图生视频模型做出“看左”“看右”两段转头素材。
+3. **抽帧**：把转头素材拼成一条从左到右的帧序列。
+4. **做成网页**：你的内容 + 帧序列，打开网页，鼠标往哪边移，主角就把头转向哪边。
 
 - **写实质感**：毛发、光影、转头透视都来自视频模型，代码只负责按鼠标位置切帧。
 - **不写 WebGL、不抠像**：角色图用纯色背景，页面背景自动取成同色，边缘羽化融进去。
@@ -43,11 +48,11 @@ npx -y github:Agentchengfeng/chengfeng-cursor-follow doctor   # 检查安装和�
 
 直接跟 Agent 说：
 
-- “用 chengfeng-cursor-follow 把我的吉祥物（附图）做成跟着鼠标转头的首页。”
-- “做一只穿红毛衣、表情嫌弃的西施犬，红色背景，鼠标移到哪它就瞪向哪。我用的是可灵网页版。”
-- “我已经有两段转头视频 left.mp4 和 right.mp4，帮我做成网页。”
+- “用 chengfeng-cursor-follow 给我的咖啡店做个首页，主角是店里的柴犬（附图），按钮链到小程序。”
+- “做一个 AI 写作工具的产品首页，主角你来设计，风格暗色科技感。我用的是可灵网页版。”
+- “我的个人主页，主角用我的头像形象；我已经有两段转头视频 left.mp4 和 right.mp4。”
 
-或者只说一句“跑一下这个 Skill”。Agent 会先一次问清三件事：角色用什么（你的图 / 描述生成 / 示例小狗）、用哪个平台生成（已装的工具 / 网页端手动 / 已有视频）、页面放哪；之后每个花钱或需要你动手的步骤都会先停下来给你看、等你确认。只有网页端也没关系，Agent 会给你一张“照着点”的操作卡，你生成好视频发回来即可。
+或者只说一句“跑一下这个 Skill”。Agent 会先问你要做什么样的网页，再按网页给出主角形象方案；生成前告诉你用什么工具、大概花多少，形象图和转头素材出来都会先给你看。只有网页端的生成工具也没关系，Agent 会给你一张“照着点”的操作卡，你生成好视频发回来即可。
 
 ## 工作原理
 
@@ -76,7 +81,7 @@ python3 ~/.agents/skills/chengfeng-cursor-follow/scripts/build_frames.py \
 chengfeng-cursor-follow/
 ├── bin/install.js                     安装 / 检查 / 卸载
 ├── skills/chengfeng-cursor-follow/
-│   ├── SKILL.md                       五步流程：角色图 → 转头视频 → 抽帧 → 页面 → 验收
+│   ├── SKILL.md                       四步：问清网页 → 做主角转头素材 → 抽帧 → 做成网页
 │   ├── scripts/build_frames.py        拼帧、取背景色、首帧一致性检查（Python 标准库 + ffmpeg）
 │   ├── assets/template/index.html     落地页模板，读取 frames/config.js
 │   └── references/

@@ -7,7 +7,7 @@ description: 安装包说明：chengfeng-cursor-follow 仓库的安装入口。�
 
 这是安装包根目录，不是要直接加载的 Skill。
 
-**给 Agent：** 用户给出本仓库链接并说“跑一下”“用这个”时，先安装（或确认已安装），再读取 `skills/chengfeng-cursor-follow/SKILL.md`，从“0 开场引导”开始带用户做他自己的页面。不要克隆后用合成素材自测并汇报结果。
+**给 Agent：** 用户给出本仓库链接并说“跑一下”“用这个”时，先安装（或确认已安装），再读取 `skills/chengfeng-cursor-follow/SKILL.md`，从“第一步：问用户要做什么样的网页”开始，带用户做他自己的网页。不要克隆后用合成素材自测并汇报结果。
 
 - 实际 Skill：[skills/chengfeng-cursor-follow/SKILL.md](skills/chengfeng-cursor-follow/SKILL.md)
 - 安装：`npx -y github:Agentchengfeng/chengfeng-cursor-follow install`

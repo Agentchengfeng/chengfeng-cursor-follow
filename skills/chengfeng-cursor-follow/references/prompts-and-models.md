@@ -30,7 +30,7 @@ no objects, no text, no props.
 Soft studio lighting, ultra detailed.
 ```
 
-用户在开场选了“示例角色”时，直接用这一版（背景红色 #8f1d22）：
+用户想先看示例效果、或做“嫌弃脸小狗”这类形象时，可以参考这一版（背景红色 #8f1d22）：
 
 ```text
 Pixar-style 3D render of a small fluffy Shih Tzu puppy with cream white fur and caramel brown floppy ears,
