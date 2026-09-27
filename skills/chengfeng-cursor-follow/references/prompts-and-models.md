@@ -30,6 +30,18 @@ no objects, no text, no props.
 Soft studio lighting, ultra detailed.
 ```
 
+用户在开场选了“示例角色”时，直接用这一版（背景红色 #8f1d22）：
+
+```text
+Pixar-style 3D render of a small fluffy Shih Tzu puppy with cream white fur and caramel brown floppy ears,
+wearing a red knit sweater. Grumpy, judgmental expression: heavy half-lidded eyes, slight frown.
+The puppy is perfectly centered in frame, head and shoulders only, head facing straight toward the camera,
+eyes looking straight at the viewer. Head occupies the middle third of the frame.
+Background: smooth seamless deep crimson red studio backdrop (#8f1d22) with soft vignette,
+no objects, no text, no props. Soft cinematic studio lighting, subsurface scattering on fur,
+shallow depth of field, ultra detailed fur.
+```
+
 - 画幅 16:9（横屏落地页）。竖屏页面用 9:16，模板里 `SUBJECT_HEIGHT` 相应调小。
 - 背景必须是纯色摄影棚底。纯色背景才能不抠像直接融进页面。
 - 头部只占画面中间三分之一，给转头留出左右空间，避免头转出画面。
