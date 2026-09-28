@@ -83,7 +83,7 @@ def main():
     ap.add_argument("--right")
     ap.add_argument("--sweep")
     ap.add_argument("--out", required=True, help="网页目录，帧写入 <out>/frames")
-    ap.add_argument("--step", type=int, default=2, help="每隔几帧取一帧，默认 2")
+    ap.add_argument("--step", type=int, default=1, help="每隔几帧取一帧，默认 1；保留首帧后的过渡帧，避免中心亮度跳变")
     ap.add_argument("--width", type=int, default=1600, help="输出帧宽度，默认 1600")
     ap.add_argument("--quality", type=int, default=4, help="JPEG 质量 2(好)~31(差)，默认 4")
     ap.add_argument("--max-deg", type=int, default=40, help="页面角度读数的最大值，默认 40")

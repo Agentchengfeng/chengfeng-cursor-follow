@@ -1,6 +1,6 @@
 interface:
   display_name: "chengfeng · 跟随鼠标转头"
-  short_description: "用任意图生视频模型做一只会跟着鼠标转头的写实角色网页"
-  default_prompt: "使用 $chengfeng-cursor-follow 把这个角色做成跟着鼠标转头的网页：生成正视角色图和左右转头视频，抽帧并套用页面模板。"
+  short_description: "先确认角色图，再引导用户制作左右转头视频并做成跟随鼠标的网页"
+  default_prompt: "使用 $chengfeng-cursor-follow 把这个角色做成跟着鼠标转头的网页：先确认是否有现成主角图，没有就生成；图准备好后只给视频工具地址和看左/看右提示词，收到视频后再抽帧并套用页面模板。"
 policy:
   allow_implicit_invocation: true
