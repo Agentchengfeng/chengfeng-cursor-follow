@@ -7,7 +7,7 @@ description: 安装包说明：chengfeng-cursor-follow 仓库的安装入口。�
 
 这是安装包根目录，不是要直接加载的 Skill。
 
-**给 Agent：** 用户给出本仓库链接并说“跑一下”“用这个”时，先安装（或确认已安装），再读取 `skills/chengfeng-cursor-follow/SKILL.md`，从“开场：先确认主角图”开始：先问用户有没有现成主角图；没有就先生成图；图准备好后把用户引导到自己的图生视频工具完成“看左 / 看右”两段。不要克隆后用合成素材自测并汇报结果。
+**给 Agent：** 用户给出本仓库链接并说“跑一下”“用这个”时，先安装（或确认已安装），再读取 `skills/chengfeng-cursor-follow/SKILL.md`，从“开场：先确认主角图”开始：先问用户有没有现成主角图；没有就先生成图；图准备好后做“看左 / 看右”两段图生视频：本地有工具就直接生成，没有就引导用户选“图生视频”、上传这张图作首帧来生成。不要克隆后用合成素材自测并汇报结果。
 
 - 实际 Skill：[skills/chengfeng-cursor-follow/SKILL.md](skills/chengfeng-cursor-follow/SKILL.md)
 - 安装：`npx -y github:Agentchengfeng/chengfeng-cursor-follow install`
